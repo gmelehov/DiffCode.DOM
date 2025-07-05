@@ -1,0 +1,20 @@
+﻿using DiffCode.DOM.Core.Abstractions.Paragraphs;
+using DiffCode.DOM.Interfaces;
+
+namespace DiffCode.DOM.Core.Models.Paragraphs;
+
+/// <summary>
+/// Абзац-таблица.
+/// </summary>
+public class Grid : BaseGrid
+{
+  /// <summary>
+  /// Создает новый абзац.
+  /// </summary>
+  /// <param name="fragments">Коллекция текстовых фрагментов для этого абзаца.</param>
+  public Grid(params IText[] fragments) : base(fragments)
+  {
+
+  }
+
+}

@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.6" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.6" />
+    <PackageReference Include="MigraDocCore.DocumentObjectModel" Version="1.3.65" />
+    <PackageReference Include="MigraDocCore.Rendering" Version="1.3.65" />
+    <PackageReference Include="PdfSharpCore" Version="1.3.65" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\DiffCode.DOM.Common\DiffCode.DOM.Common.csproj" />
+    <ProjectReference Include="..\DiffCode.DOM.Core\DiffCode.DOM.Core.csproj" />
+    <ProjectReference Include="..\DiffCode.DOM.Interfaces\DiffCode.DOM.Interfaces.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Using Include="DiffCode.DOM.Common.Enums.ParaTypeEnum" Static="true" />
+    <Using Include="DiffCode.DOM.Common.Enums.AlignEnum" Static="true" />
+    <Using Include="DiffCode.DOM.Interfaces" />
+    <Using Include="DiffCode.DOM.Core.Abstractions" />
+    <Using Include="DiffCode.DOM.Core.Ids" />
+    <Using Include="DiffCode.DOM.Core.Models" />
+    <Using Include="DiffCode.DOM.Core.Extensions" />
+  </ItemGroup>
+
+</Project>

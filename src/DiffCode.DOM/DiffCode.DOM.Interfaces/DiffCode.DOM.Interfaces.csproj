@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DiffCode.Validating.Interfaces" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DiffCode.DOM.Common\DiffCode.DOM.Common.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Using Include="DiffCode.DOM.Interfaces.Paragraphs"/>
+  </ItemGroup>
+
+</Project>

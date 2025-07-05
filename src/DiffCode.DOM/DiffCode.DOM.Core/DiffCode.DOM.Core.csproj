@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DiffCode.DOM.Interfaces\DiffCode.DOM.Interfaces.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="DiffCode.DOM.Common.Enums.ParaTypeEnum" Static="true" />
+    <Using Include="DiffCode.DOM.Interfaces.Paragraphs"/>
+  </ItemGroup>
+
+  
+</Project>
