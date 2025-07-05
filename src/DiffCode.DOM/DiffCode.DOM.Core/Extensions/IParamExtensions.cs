@@ -4,6 +4,9 @@ using DiffCode.Validating.Interfaces.Extensions;
 
 namespace DiffCode.DOM.Core.Extensions;
 
+/// <summary>
+/// Методы расширения для параметра.
+/// </summary>
 public static class IParamExtensions
 {
 

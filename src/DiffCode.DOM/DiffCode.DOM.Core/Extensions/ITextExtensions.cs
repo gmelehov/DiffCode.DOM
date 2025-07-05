@@ -5,6 +5,9 @@ using DiffCode.Validating.Interfaces.Extensions;
 
 namespace DiffCode.DOM.Core.Extensions;
 
+/// <summary>
+/// Методы расширения для текстового фрагмента.
+/// </summary>
 public static class ITextExtensions
 {
 
