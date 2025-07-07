@@ -41,6 +41,14 @@ public abstract class BaseIndented4 : BasePara
   {
 
   }
+  /// <summary>
+  /// <inheritdoc/>
+  /// </summary>
+  /// <param name="objects"></param>
+  protected BaseIndented4(params object[] objects) : base(objects)
+  {
+
+  }
 
 
 

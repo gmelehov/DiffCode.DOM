@@ -186,6 +186,7 @@ public abstract class BaseDocum : BaseValidatable<IDocum>, IDocum, IWithFluentAc
     :
     DocumId.New(new ushort[] { 0 }.Concat(GetParentsAxis().Reverse()?.Select(s => s.GetOrder())).ToArray());
 
+  [DebuggerBrowsable(DebuggerBrowsableState.Never)]
   ITypedId<string> IDocum.Id => Id;
 
 
@@ -231,5 +232,6 @@ public abstract class BaseDocum : BaseValidatable<IDocum>, IDocum, IWithFluentAc
   [DebuggerBrowsable(DebuggerBrowsableState.Never)]
   public Expr IsActiveOn => _isActiveOn;
 
+  [DebuggerBrowsable(DebuggerBrowsableState.Never)]
   IExpr IActiveState.IsActiveOn => IsActiveOn;
 }

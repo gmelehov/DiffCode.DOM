@@ -20,8 +20,7 @@ public interface IParam<T> : IParam, IValidatable<IParam<T>>
   IParam<T> Set(T val);
 
 
-
-
+  
   /// <summary>
   /// Значение параметра.
   /// </summary>

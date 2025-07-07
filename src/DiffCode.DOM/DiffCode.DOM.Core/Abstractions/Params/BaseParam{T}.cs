@@ -9,7 +9,7 @@ namespace DiffCode.DOM.Core.Abstractions.Params;
 
 
 /// <summary>
-/// Базовая модель типизированного параметра шаблона.
+/// Базовая модель типизированного параметра.
 /// </summary>
 /// <typeparam name="T"></typeparam>
 [DebuggerDisplay("{Id}: {Value}")]
@@ -26,6 +26,7 @@ public abstract class BaseParam<T> : BaseValidatable<IParam<T>>, IParam<T>
 
   [DebuggerBrowsable(DebuggerBrowsableState.Never)]
   private T _val;
+
 
 
 
@@ -70,7 +71,7 @@ public abstract class BaseParam<T> : BaseValidatable<IParam<T>>, IParam<T>
   /// </summary>
   /// <param name="val"></param>
   /// <returns></returns>
-  public IParam<T> Set(T val)
+  public virtual IParam<T> Set(T val)
   {
     if (!_isValueLocked)
     {
@@ -122,6 +123,7 @@ public abstract class BaseParam<T> : BaseValidatable<IParam<T>>, IParam<T>
   /// </summary>
   public ParamId Id { get; }
 
+  [DebuggerBrowsable(DebuggerBrowsableState.Never)]
   ITypedId<string> IParam.Id => Id;
 
 
@@ -145,7 +147,7 @@ public abstract class BaseParam<T> : BaseValidatable<IParam<T>>, IParam<T>
   /// <inheritdoc/>
   /// </summary>
   [DebuggerBrowsable(DebuggerBrowsableState.Collapsed)]
-  public T Value => _val;
+  public virtual T Value => _val;
 
 
   /// <summary>

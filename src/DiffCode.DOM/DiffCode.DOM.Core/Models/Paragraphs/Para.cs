@@ -24,9 +24,9 @@ public class Para : BasePara, IPara, ISimplePara
   /// Создает новый абзац.
   /// </summary>
   /// <param name="fragments">Коллекция текстовых фрагментов для этого абзаца.</param>
-  public Para(Expr exprWrapper, params IText[] fragments) : base(fragments)
+  public Para(Expr? exprWrapper = null, params IText[] fragments) : base(fragments)
   {
-    _isActiveOn = exprWrapper;
+    _isActiveOn = exprWrapper ?? Expr.IsTrue;
     Align = AlignEnum.BOTH;
   }
   /// <summary>
@@ -58,7 +58,16 @@ public class Para : BasePara, IPara, ISimplePara
   /// <inheritdoc/>
   /// </summary>
   /// <param name="strings"></param>
-  public Para(params string[] strings) : base(strings)
+  public Para(Expr? exprWrapper = null, params string[] strings) : base(strings)
+  {
+    _isActiveOn = exprWrapper ?? Expr.IsTrue;
+    Align = AlignEnum.BOTH;
+  }
+  /// <summary>
+  /// <inheritdoc/>
+  /// </summary>
+  /// <param name="strings"></param>
+  public Para(params object[] objects) : base(objects)
   {
     Align = AlignEnum.BOTH;
   }

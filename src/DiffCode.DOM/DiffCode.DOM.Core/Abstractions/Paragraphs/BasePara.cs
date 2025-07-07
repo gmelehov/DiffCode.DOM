@@ -1,9 +1,13 @@
 ﻿using DiffCode.DOM.Common.Enums;
 using DiffCode.DOM.Core.Ids;
 using DiffCode.DOM.Core.Models;
+using DiffCode.DOM.Core.Models.Paragraphs;
+using DiffCode.DOM.Core.Models.Params;
+using DiffCode.DOM.Core.Models.Texts;
 using DiffCode.DOM.Interfaces;
 using DiffCode.Validating.Interfaces.Extensions;
 using System.Diagnostics;
+using System.Linq.Expressions;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -95,6 +99,45 @@ public abstract class BasePara : BaseValidatable<IPara>, IPara
     Lines = new BeforeAfter<int>(0, 0);
     Spacing = new BeforeAfter<int>(0, 0);
     AddRange(strings);
+  }
+
+  protected BasePara(params object[] objects)
+  {
+    _texts ??= [];
+    _paragraphs ??= [];
+    Lines = new BeforeAfter<int>(0, 0);
+    Spacing = new BeforeAfter<int>(0, 0);
+    foreach (var obj in objects)
+    {
+      if (obj is IPara pp)
+      {
+        AddRange(pp);
+      }
+      else if (obj is IText tt)
+      {
+        AddRange(tt);
+      }
+      else if (obj is string ss)
+      {
+        AddRange(new Text(() => ss));
+      }
+      else if (obj is DateOnlyParam prmDate)
+      {
+        AddRange(new Text(prmDate));
+      }
+      else if (obj is IParam prm)
+      {
+        AddRange(new Text(prm));
+      }
+      else if(obj is Func<string> fn)
+      {
+        AddRange(new Text(fn));
+      }
+      else if (obj is Expr expr)
+      {
+        SetActiveOn<BasePara>(expr);
+      }
+    }
   }
 
 
@@ -450,6 +493,7 @@ public abstract class BasePara : BaseValidatable<IPara>, IPara
   /// </summary>
   public ParaId Id => GetParentsAxis().Count() == 0 ? ParaId.New(0) : ParaId.New(new ushort[] { 0 }.Concat(GetParentsAxis().Reverse()?.Select(s => s.GetOrder())).ToArray());
 
+  [DebuggerBrowsable(DebuggerBrowsableState.Never)]
   ITypedId<string> IPara.Id => Id;
 
 
@@ -520,6 +564,7 @@ public abstract class BasePara : BaseValidatable<IPara>, IPara
   [DebuggerBrowsable(DebuggerBrowsableState.Never)]
   public Expr IsActiveOn => _isActiveOn;
 
+  [DebuggerBrowsable(DebuggerBrowsableState.Never)]
   IExpr IActiveState.IsActiveOn => IsActiveOn;
 
 
@@ -530,5 +575,69 @@ public abstract class BasePara : BaseValidatable<IPara>, IPara
 
 
   public override string ToString() => $"{GetFullText()}";
+
+
+
+
+
+
+
+
+
+  public static Para Para(params object[] objects) => new(objects);
+
+
+  public static Bulleted1 Bulleted1(params object[] objects) => new(objects);
+
+
+  public static Bulleted2 Bulleted2(params object[] objects) => new(objects);
+
+
+  public static Bulleted3 Bulleted3(params object[] objects) => new(objects);
+
+
+  public static Cell Cell(params object[] objects) => new(objects);
+
+
+  public static Grid Grid(params object[] objects) => new(objects);
+
+
+  public static Header1 Header1(params object[] objects) => new(objects);
+
+
+  public static Header2 Header2(params object[] objects) => new(objects);
+
+
+  public static Header3 Header3(params object[] objects) => new(objects);
+
+
+  public static Header4 Header4(params object[] objects) => new(objects);
+
+
+  public static Header5 Header5(params object[] objects) => new(objects);
+
+
+  public static Indented2 Indented2(params object[] objects) => new(objects);
+
+
+  public static Indented3 Indented3(params object[] objects) => new(objects);
+
+
+  public static Numbered1 Numbered1(params object[] objects) => new(objects);
+
+
+  public static Numbered2 Numbered2(params object[] objects) => new(objects);
+
+
+  public static Numbered3 Numbered3(params object[] objects) => new(objects);
+
+
+  public static Numbered4 Numbered4(params object[] objects) => new(objects);
+
+
+  public static NumHeader1 NumHeader1(params object[] objects) => new(objects);
+
+
+  public static TitleHeader TitleHeader(params object[] objects) => new(objects);
 
 }

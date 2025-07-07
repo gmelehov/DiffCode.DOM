@@ -16,5 +16,13 @@ public class Bulleted3 : BaseBulleted3
   {
 
   }
+  /// <summary>
+  /// <inheritdoc/>
+  /// </summary>
+  /// <param name="objects"></param>
+  public Bulleted3(params object[] objects) : base(objects)
+  {
+
+  }
 
 }

@@ -41,6 +41,14 @@ public abstract class BaseNumbered2 : BasePara, INumbered2
   {
 
   }
+  /// <summary>
+  /// <inheritdoc/>
+  /// </summary>
+  /// <param name="objects"></param>
+  protected BaseNumbered2(params object[] objects) : base(objects)
+  {
+
+  }
 
 
 

@@ -137,6 +137,7 @@ public abstract class BaseText : BaseValidatable<IText>, IText
   [DebuggerBrowsable(DebuggerBrowsableState.Never)]
   public Expr IsActiveOn => _isActiveOn;
 
+  [DebuggerBrowsable(DebuggerBrowsableState.Never)]
   IExpr IActiveState.IsActiveOn => IsActiveOn;
 
 

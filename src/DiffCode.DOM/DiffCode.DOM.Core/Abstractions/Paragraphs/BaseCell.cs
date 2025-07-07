@@ -49,6 +49,14 @@ public abstract class BaseCell : BasePara, ICell
   {
 
   }
+  /// <summary>
+  /// <inheritdoc/>
+  /// </summary>
+  /// <param name="objects"></param>
+  protected BaseCell(params object[] objects) : base(objects)
+  {
+
+  }
 
 
 

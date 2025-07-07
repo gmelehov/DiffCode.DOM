@@ -8,7 +8,7 @@ namespace DiffCode.DOM.Core.Ids;
 /// <summary>
 /// Типизированный идентификатор для абзаца шаблона.
 /// </summary>
-[DebuggerDisplay("{AsText}")]
+[DebuggerDisplay("{Value}")]
 public readonly record struct ParaId : ITypedId<string>, IComparable<ParaId>, IEquatable<ParaId>
 {
   public ParaId(params ushort[] ushorts)

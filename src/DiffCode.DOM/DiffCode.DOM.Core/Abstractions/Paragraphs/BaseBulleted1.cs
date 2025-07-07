@@ -41,6 +41,15 @@ public abstract class BaseBulleted1 : BasePara, IBulleted1
   {
 
   }
+  /// <summary>
+  /// <inheritdoc/>
+  /// </summary>
+  /// <param name="objects"></param>
+  protected BaseBulleted1(params object[] objects) : base(objects)
+  {
+
+  }
+
 
 
 

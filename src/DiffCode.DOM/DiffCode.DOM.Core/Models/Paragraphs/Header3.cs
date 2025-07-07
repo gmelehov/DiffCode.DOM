@@ -32,6 +32,13 @@ public class Header3 : BaseHeader3
   {
 
   }
+  /// <summary>
+  /// <inheritdoc/>
+  /// </summary>
+  /// <param name="objects"></param>
+  public Header3(params object[] objects) : base(objects)
+  {
 
+  }
 
 }

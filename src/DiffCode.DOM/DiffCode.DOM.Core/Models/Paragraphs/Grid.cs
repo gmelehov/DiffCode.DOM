@@ -16,5 +16,13 @@ public class Grid : BaseGrid
   {
 
   }
+  /// <summary>
+  /// <inheritdoc/>
+  /// </summary>
+  /// <param name="objects"></param>
+  public Grid(params object[] objects) : base(objects)
+  {
+
+  }
 
 }

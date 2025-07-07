@@ -24,5 +24,13 @@ public class Numbered3 : BaseNumbered3
   {
 
   }
+  /// <summary>
+  /// <inheritdoc/>
+  /// </summary>
+  /// <param name="objects"></param>
+  public Numbered3(params object[] objects) : base(objects)
+  {
+
+  }
 
 }

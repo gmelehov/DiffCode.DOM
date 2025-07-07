@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DiffCode.DOM.Common\DiffCode.DOM.Common.csproj" />
+    <ProjectReference Include="..\DiffCode.DOM.Core\DiffCode.DOM.Core.csproj" />
+    <ProjectReference Include="..\DiffCode.DOM.Examples\DiffCode.DOM.Examples.csproj" />
+    <ProjectReference Include="..\DiffCode.DOM.Interfaces\DiffCode.DOM.Interfaces.csproj" />
+    <ProjectReference Include="..\DiffCode.DOM.Rendering\DiffCode.DOM.Rendering.csproj" />
+  </ItemGroup>
+
+</Project>

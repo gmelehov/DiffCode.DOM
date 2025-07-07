@@ -34,7 +34,7 @@ public class Param<T> : BaseParam<T>
   /// <param name="memberName"></param>
   public Param(Expr exprWrapper, [CallerMemberName] string memberName = "") : base(exprWrapper, memberName)
   {
-
+    
   }
 
 }

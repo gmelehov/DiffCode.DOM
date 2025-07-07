@@ -16,5 +16,13 @@ public class Indented3 : BaseIndented3
   {
 
   }
+  /// <summary>
+  /// <inheritdoc/>
+  /// </summary>
+  /// <param name="objects"></param>
+  public Indented3(params object[] objects) : base(objects)
+  {
+
+  }
 
 }

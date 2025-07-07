@@ -100,6 +100,7 @@ public abstract class BaseParam : IParam
   /// </summary>
   public ParamId Id { get; }
 
+  [DebuggerBrowsable(DebuggerBrowsableState.Never)]
   ITypedId<string> IParam.Id => Id;
 
 

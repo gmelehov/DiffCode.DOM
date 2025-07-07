@@ -32,7 +32,7 @@ public abstract class BaseNumHeader1 : BasePara, INumHeader1
   /// <param name="expr"></param>
   protected BaseNumHeader1(Expr expr) : base(expr)
   {
-
+    Lines = new BeforeAfter<int>(1, 1);
   }
   /// <summary>
   /// <inheritdoc/>
@@ -40,7 +40,15 @@ public abstract class BaseNumHeader1 : BasePara, INumHeader1
   /// <param name="strings"></param>
   protected BaseNumHeader1(params string[] strings) : base(strings)
   {
-
+    Lines = new BeforeAfter<int>(1, 1);
+  }
+  /// <summary>
+  /// <inheritdoc/>
+  /// </summary>
+  /// <param name="objects"></param>
+  protected BaseNumHeader1(params object[] objects) : base(objects)
+  {
+    Lines = new BeforeAfter<int>(1, 1);
   }
 
 

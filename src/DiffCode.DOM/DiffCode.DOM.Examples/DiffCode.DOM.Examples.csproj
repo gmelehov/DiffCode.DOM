@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DiffCode.DOM.Common\DiffCode.DOM.Common.csproj" />
+    <ProjectReference Include="..\DiffCode.DOM.Core\DiffCode.DOM.Core.csproj" />
+    <ProjectReference Include="..\DiffCode.DOM.Interfaces\DiffCode.DOM.Interfaces.csproj" />
+    <ProjectReference Include="..\DiffCode.DOM.Rendering\DiffCode.DOM.Rendering.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DiffCode.CommonEntities.GrammarServices" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="DiffCode.DOM.Core.Abstractions.Paragraphs.BasePara" Static="true"/>
+  </ItemGroup>
+
+</Project>

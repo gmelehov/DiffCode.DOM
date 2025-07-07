@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiffCode.DOM.Core", "DiffCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiffCode.DOM.Rendering", "DiffCode.DOM.Rendering\DiffCode.DOM.Rendering.csproj", "{7BD495A5-801D-4D39-9275-40955A50D3BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiffCode.DOM.Examples", "DiffCode.DOM.Examples\DiffCode.DOM.Examples.csproj", "{64D0CA1D-686E-43B8-9847-F51C89C0445A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsApp", "ConsApp\ConsApp.csproj", "{95B6A928-C900-4C04-B1D2-541168EC0278}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{7BD495A5-801D-4D39-9275-40955A50D3BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BD495A5-801D-4D39-9275-40955A50D3BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BD495A5-801D-4D39-9275-40955A50D3BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64D0CA1D-686E-43B8-9847-F51C89C0445A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64D0CA1D-686E-43B8-9847-F51C89C0445A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64D0CA1D-686E-43B8-9847-F51C89C0445A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64D0CA1D-686E-43B8-9847-F51C89C0445A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95B6A928-C900-4C04-B1D2-541168EC0278}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95B6A928-C900-4C04-B1D2-541168EC0278}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95B6A928-C900-4C04-B1D2-541168EC0278}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95B6A928-C900-4C04-B1D2-541168EC0278}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

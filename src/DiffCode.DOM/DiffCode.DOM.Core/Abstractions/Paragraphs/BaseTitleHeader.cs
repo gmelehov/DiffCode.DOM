@@ -48,6 +48,14 @@ public abstract class BaseTitleHeader : BasePara, ITitleHeader
   {
     Align = AlignEnum.CENTER;
   }
+  /// <summary>
+  /// <inheritdoc/>
+  /// </summary>
+  /// <param name="objects"></param>
+  protected BaseTitleHeader(params object[] objects) : base(objects)
+  {
+    Align = AlignEnum.CENTER;
+  }
 
 
 

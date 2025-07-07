@@ -24,4 +24,12 @@ public class NumHeader1 : BaseNumHeader1
   {
 
   }
+  /// <summary>
+  /// <inheritdoc/>
+  /// </summary>
+  /// <param name="objects"></param>
+  public NumHeader1(params object[] objects) : base(objects)
+  {
+
+  }
 }

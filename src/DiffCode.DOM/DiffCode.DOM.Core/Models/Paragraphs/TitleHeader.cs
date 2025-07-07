@@ -37,6 +37,13 @@ public class TitleHeader : BaseTitleHeader
   {
 
   }
+  /// <summary>
+  /// <inheritdoc/>
+  /// </summary>
+  /// <param name="objects"></param>
+  public TitleHeader(params object[] objects) : base(objects)
+  {
 
+  }
 
 }

@@ -41,6 +41,14 @@ public abstract class BaseHeader5 : BasePara, IHeader5
   {
 
   }
+  /// <summary>
+  /// <inheritdoc/>
+  /// </summary>
+  /// <param name="objects"></param>
+  protected BaseHeader5(params object[] objects) : base(objects)
+  {
+
+  }
 
 
 

@@ -42,6 +42,15 @@ public abstract class BaseGrid : BasePara, IGrid
   {
 
   }
+  /// <summary>
+  /// <inheritdoc/>
+  /// </summary>
+  /// <param name="objects"></param>
+  protected BaseGrid(params object[] objects) : base(objects)
+  {
+
+  }
+
 
 
 

@@ -16,6 +16,13 @@ public class Header4 : BaseHeader4
   {
 
   }
+  /// <summary>
+  /// <inheritdoc/>
+  /// </summary>
+  /// <param name="objects"></param>
+  public Header4(params object[] objects) : base(objects)
+  {
 
+  }
 
 }

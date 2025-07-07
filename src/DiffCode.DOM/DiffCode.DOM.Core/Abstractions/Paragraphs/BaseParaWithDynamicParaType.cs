@@ -57,6 +57,14 @@ public abstract class BaseParaWithDynamicParaType : BasePara
   {
     AddRange(strings);
   }
+  /// <summary>
+  /// <inheritdoc/>
+  /// </summary>
+  /// <param name="objects"></param>
+  protected BaseParaWithDynamicParaType(ParaTypeEnum paraType, params object[] objects) : base(objects)
+  {
+    _paraType = paraType;
+  }
 
 
 
